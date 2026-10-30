@@ -6,7 +6,6 @@ This directory demonstrates running compressed/rasterized images through the mod
 2. Tracking and observable gathering via g4/edep-sim within a cube of liquid argon
 3. Creating an image by voxelizing the depositions within the volume then summing over the y dimension: `rasterize.cpp`
 4. Sending that through the model stored in `traced.ptrom`: `inference.py`
-   - Note: this divides the 
 
 Note: the images used to train this model were made in some other way which at the time of writing is still unknown: so the model won't perform well on these events. It still shows how inference can be integrated within phlex.
 
