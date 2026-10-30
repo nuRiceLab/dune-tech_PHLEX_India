@@ -8,7 +8,8 @@ This directory demonstrates running compressed/rasterized images through the mod
 4. Sending that through the model stored in `traced.ptrom`: `inference.py`
    - Note: this divides the 
 
-Note: the images used to train this model were made in some other way, so there might be a `domain shift` between the training images and those made from the simulation here, so the accuracy might not match that in the training notebook.
+Note: the images used to train this model were made in some other way which at the time of writing is still unknown: so the model won't perform well on these events. It still shows how inference can be integrated within phlex.
+
 
 ## Building
 You should run `build.sh` in the dir above to checkout and build an edited version of phlex-examples
@@ -20,6 +21,7 @@ Make sure `../build-phlex-examples`, `/cvmfs/phaindia.example.org/env/phaindia/v
 `export PHLEX_PLUGIN_PATH=/path/to/build-phlex-examples:${PWD}/build:${PHLEX_PLUGIN_PATH}`
 
 Also make sure this dir is in your PYTHONPATH:
+
 `export PYTHONPATH=${PWD}:${PYTHONPATH}`
 
 now you can run from within build:
