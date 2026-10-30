@@ -61,19 +61,15 @@ def PHLEX_REGISTER_PROVIDERS(s, config):
     ]
     muon_angle = float(phlex_config.get(config, "muon_angle", 100.0))
 
-    def provide(di):
+    def provide(di: "data_cell_index") -> npt.NDArray[np.float64]:
         return generate(di.number(), positions, muon_angle)
 
-    f = Variant(
-        provide,
-        {"di": "data_cell_index", "return": npt.NDArray[np.float64]},
-        "generate",
-    )
     s.provide(
-        f,
+        provide,
         {
             "creator": phlex_config.get(config, "creator", "pygen"),
             "layer": config["layer"],
             "suffix": phlex_config.get(config, "suffix", "particles"),
         },
+        "generate",
     )
