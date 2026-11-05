@@ -2,3 +2,7 @@
 	path = tutorial-DUNENDSim
 	url = https://github.com/alexbooth92/tutorial-DUNENDSim.git
 	branch = dune-tech-rice
+[submodule "phlex-first-steps"]
+	path = phlex-first-steps
+	url = https://github.com/gavinsdavies/phlex-first-steps.git
+	branch = main
